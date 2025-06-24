@@ -1,0 +1,25 @@
+{
+  "name": "backend-app",
+  "version": "1.0.0",
+  "description": "backend app for MERN stack dockarize container App",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": {
+    "name": "Amandeep Singh",
+    "email": "amandeep.singh@truinc.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "pg": "^8.16.2"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "nodemon": "^3.1.10"
+  }
+}
