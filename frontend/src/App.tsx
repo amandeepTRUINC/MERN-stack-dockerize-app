@@ -1,8 +1,14 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 
+interface User {
+  id: number;
+  first_name: string;
+  last_name: string;
+  email: string;
+}
 function App() {
-  const [users, setUsers] = useState([]);
+  const [users, setUsers] = useState<User[]>([]);
   const API_URL = process.env.REACT_APP_API_URL;
 
   useEffect(() => {
@@ -41,7 +47,7 @@ function App() {
               ))
             ) : (
               <tr>
-                <td colSpan="4">Loading...</td>
+                <td colSpan={4}>Loading...</td>
               </tr>
             )}
           </tbody>
