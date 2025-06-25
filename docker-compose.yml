@@ -32,9 +32,8 @@ services:
     restart: always
     ports:
       - 5432:5432
-    environment:
-      POSTGRES_USER: root
-      POSTGRES_PASSWORD: root
+    env_file:
+      - ./backend/.env
     volumes:
       - db-data:/var/lib/postgresql/data
     healthcheck:
@@ -47,9 +46,8 @@ services:
     container_name: pgadmin4_container
     image: dpage/pgadmin4
     restart: always
-    environment:
-      PGADMIN_DEFAULT_EMAIL: admin@admin.com
-      PGADMIN_DEFAULT_PASSWORD: root
+    env_file:
+      - ./backend/.env
     ports:
       - "8000:80"
 
