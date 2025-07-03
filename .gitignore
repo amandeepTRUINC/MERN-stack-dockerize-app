@@ -42,7 +42,6 @@ Thumbs.db
 coverage/
 
 # Docker files
-**/Dockerfile
 **/.dockerignore
 
 # React-specific
